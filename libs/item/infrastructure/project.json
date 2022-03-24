@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/item/infrastructure",
+  "sourceRoot": "libs/item/infrastructure/src",
+  "prefix": "test",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/item/infrastructure"],
+      "options": {
+        "jestConfig": "libs/item/infrastructure/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/item/infrastructure/src/**/*.ts",
+          "libs/item/infrastructure/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:infrastructure"]
+}

@@ -1,0 +1,9 @@
+<ul *ngFor="let item of items$ | async">
+  <div>Id: {{ item.id }}</div>
+  <div>
+    Image:
+    <img [src]="item.image" />
+  </div>
+  <div>Title: {{ item.title }}</div>
+  <div>Preview: {{ item.previewUrl }}</div>
+</ul>

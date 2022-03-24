@@ -2,6 +2,10 @@
   "version": 2,
   "projects": {
     "cobiro": "apps/cobiro",
-    "cobiro-e2e": "apps/cobiro-e2e"
+    "cobiro-e2e": "apps/cobiro-e2e",
+    "item-application": "libs/item/application",
+    "item-domain": "libs/item/domain",
+    "item-infrastructure": "libs/item/infrastructure",
+    "item-view": "libs/item/view"
   }
 }

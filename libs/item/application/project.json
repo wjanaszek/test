@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/item/application",
+  "sourceRoot": "libs/item/application/src",
+  "prefix": "test",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/item/application"],
+      "options": {
+        "jestConfig": "libs/item/application/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/item/application/src/**/*.ts",
+          "libs/item/application/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:application"]
+}

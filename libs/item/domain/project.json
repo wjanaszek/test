@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/item/domain",
+  "sourceRoot": "libs/item/domain/src",
+  "prefix": "test",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/item/domain"],
+      "options": {
+        "jestConfig": "libs/item/domain/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/item/domain/src/**/*.ts",
+          "libs/item/domain/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:domain"]
+}
