@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ItemQuery, ItemResource, ItemStorage } from '@test/item/domain';
+import { ITEM_QUERY, ItemQuery, ItemResource, ItemStorage } from '@test/item/domain';
 import { HttpItemResource } from './http-item.resource';
 import { SubjectItemQuery } from './subject-item.query';
 import { SubjectItemStorage } from './subject-item.storage';
@@ -23,7 +23,7 @@ export class ItemInfrastructureModule {
           useClass: SubjectItemStorage,
         },
         {
-          provide: ItemQuery,
+          provide: ITEM_QUERY,
           useClass: SubjectItemQuery,
         },
       ],
