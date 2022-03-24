@@ -1,9 +1,11 @@
 <ul *ngFor="let item of items$ | async">
-  <div>Id: {{ item.id }}</div>
-  <div>
-    Image:
-    <img [src]="item.image" />
-  </div>
-  <div>Title: {{ item.title }}</div>
-  <div>Preview: {{ item.previewUrl }}</div>
+  <li data-test="item">
+    <div data-test="item-id">Id: {{ item.id }}</div>
+    <div data-test="item-image">
+      Image:
+      <img [src]="item.image" />
+    </div>
+    <div>Title: {{ item.title }}</div>
+    <div>Preview: {{ item.previewUrl }}</div>
+  </li>
 </ul>
