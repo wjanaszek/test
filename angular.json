@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "cobiro": "apps/cobiro",
+    "cobiro-e2e": "apps/cobiro-e2e"
+  }
+}

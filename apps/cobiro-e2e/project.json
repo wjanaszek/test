@@ -1,0 +1,28 @@
+{
+  "root": "apps/cobiro-e2e",
+  "sourceRoot": "apps/cobiro-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/cobiro-e2e/cypress.json",
+        "devServerTarget": "cobiro:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cobiro:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cobiro-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["cobiro"]
+}
